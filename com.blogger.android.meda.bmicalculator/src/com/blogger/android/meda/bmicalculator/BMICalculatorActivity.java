@@ -17,7 +17,6 @@ public class BMICalculatorActivity extends Activity {
     public void calculateClickHandler(View view) {
     	// make sure we handle the click of the calculator button
 
-
   	if (view.getId() == R.id.calculateButton) {
     		// get the references to the widgets
     		EditText weightText = (EditText)findViewById(R.id.weightText);

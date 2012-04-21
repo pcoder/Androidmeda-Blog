@@ -27,12 +27,19 @@ public final class R {
         public static final int twosided_spinner_pressed=0x7f02000d;
     }
     public static final class id {
-        public static final int calculateButton=0x7f050004;
-        public static final int heightText=0x7f050003;
-        public static final int resultLabel=0x7f050005;
-        public static final int textView1=0x7f050000;
-        public static final int textView2=0x7f050002;
-        public static final int weightText=0x7f050001;
+        public static final int calculateButton=0x7f05000b;
+        public static final int heightText=0x7f050008;
+        public static final int resultLabel=0x7f05000c;
+        public static final int spinner1=0x7f050004;
+        public static final int spinner2=0x7f050005;
+        public static final int spinner3=0x7f050009;
+        public static final int spinner4=0x7f05000a;
+        public static final int tableLayout1=0x7f050000;
+        public static final int tableRow1=0x7f050001;
+        public static final int tableRow2=0x7f050006;
+        public static final int textView1=0x7f050002;
+        public static final int textView2=0x7f050007;
+        public static final int weightText=0x7f050003;
     }
     public static final class layout {
         public static final int main=0x7f030000;

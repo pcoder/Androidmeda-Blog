@@ -1,50 +1,112 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:orientation="vertical" >
+<TableLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/tableLayout1"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content" >
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/weightLabel"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
 
-    <EditText
-        android:id="@+id/weightText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="numberDecimal" >
+    <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"
+            android:layout_marginTop="15dip" >
 
-        <requestFocus />
-    </EditText>
+        <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dip"
+                android:text="@string/weightLabel"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+        <EditText
+                android:id="@+id/weightText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal" >
+            <requestFocus />
+        </EditText>
+        <Spinner
+                android:id="@+id/spinner1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:background="@drawable/bmi_twosided_spinner"
+                android:prompt="@string/weightLabel" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/heightLabel"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        <Spinner
+                android:id="@+id/spinner2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dip"
+                android:layout_weight="1"
+                android:background="@drawable/bmi_onesided_spinner"
+                android:drawSelectorOnTop="true"/>
+                <!--android:entries="@array/weightUnitsArray" -->
+    </TableRow>
 
-    <EditText
-        android:id="@+id/heightText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="numberDecimal" />
+    <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"
+            android:layout_marginTop="15dip" >
 
-    <Button
-        android:id="@+id/calculateButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="calculateClickHandler"
-        android:text="@string/calculateButton" />
+        <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dip"
+                android:text="@string/heightLabel"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
 
-    <TextView
-        android:id="@+id/resultLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/EmptyString"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        <EditText
+                android:id="@+id/heightText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal" />
+        <Spinner
+                android:id="@+id/spinner3"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:background="@drawable/bmi_twosided_spinner"
+                android:prompt="@string/heightLabel" />
 
-</LinearLayout>
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dip"
+                android:layout_weight="1" >
+
+            <Spinner
+                    android:id="@+id/spinner4"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bmi_onesided_spinner"/>
+                    <!--android:entries="@array/heightUnitsArray"-->
+
+
+            <Button
+                    android:id="@+id/calculateButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@+id/spinner4"
+                    android:layout_below="@+id/spinner4"
+                    android:layout_marginTop="15dip"
+                    android:background="@drawable/bmi_button"
+                    android:onClick="calculateClickHandler"
+                    android:text="@string/calculateButton" />
+
+            <TextView
+                    android:id="@+id/resultLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/EmptyString"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+        </RelativeLayout>
+
+    </TableRow>
+
+</TableLayout>
